@@ -64,22 +64,3 @@ print ("exit")
 
 
 
-
-
-    
-"""while True:
-    
-
-    city_name = input("Please enter your cityname\n")
-    current_temperatureF = float(input("Please enter your current_temperatureF\n"))
-    current_temperatureC = float(current_temperatureF - 32) * 5/9
-    if current_temperatureC < 0:
-        print("Warning:The temperature is below the freezing point.")
-    else:
-        print("The temperature is above the freezing point.")
-    print (f"The current temperature in {city_name} is {current_temperatureF} or {current_temperatureC} degrees Celsius.")
-
-    city_name = input("Please enter your cityname\n")
-    city_name == exit
-    print ("exit")
-    break """
