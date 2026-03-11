@@ -1,0 +1,27 @@
+high_temp = None
+high_city = ""
+low_temp = None
+low_city = ""
+
+city_name = input("Please enter the name of a city: ")
+while city_name != "exit":  
+
+        current_temperatureF = float(input(f"Please enter current temperature in Fahrenheit in {city_name}: "))
+        current_temperatureC = (current_temperatureF - 32) * 5/9
+        print (f"The current temperature in {city_name} is {current_temperatureF}°F or {current_temperatureC:.1f}°C .")
+        if current_temperatureC < 0:
+             print("Warning:The temperature is below the freezing point.")
+            
+        if high_temp is None or current_temperatureC > high_temp:
+                high_temp = current_temperatureC  
+                high_city = city_name     
+
+        if low_temp is None or current_temperatureC < low_temp:
+                low_temp = current_temperatureC 
+                low_city = city_name       
+       
+        city_name = input("Please enter the name of a city: ")
+print ("exit")     
+print ("Summary")
+print(f"The highest temperature is {high_temp:.1f} in {high_city }")
+print(f"The lowest temperature is {low_temp:.1f} in {low_city}")

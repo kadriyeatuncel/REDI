@@ -22,7 +22,7 @@ The current temperature in Munich is 15.6 degrees Celsius."""
 
 
 
-"""
+
 city_name = input("Please enter your cityname\n")
 current_temperatureF = float(input("Please enter your current_temperatureF\n"))
 current_temperatureC = float(current_temperatureF - 32) * 5/9
@@ -30,7 +30,7 @@ if current_temperatureC < 0:
     print("Alert:The temperature is below the freezing point.")
 else:
     print("The temperature is above the freezing point.")
-print (f"The current temperature in {city_name} is {current_temperatureC:.1f} degrees Celsius.")"""
+print (f"The current temperature in {city_name} is {current_temperatureC:.1f} degrees Celsius.")
 
 
 
