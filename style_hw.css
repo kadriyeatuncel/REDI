@@ -1,0 +1,34 @@
+/* Main page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #deebb1;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+/* Area */
+.container {
+    background-color: pink;
+    padding: 30px;
+    width: 400px;
+    /* CSS Border: Kenarlık ekleme */
+    border: 2px solid #1856a2;
+    border-radius: 20px;
+    /* CSS Text-align: Metni ortalama */
+    text-align: center;
+}
+
+/* List to the left */
+ul, ol {
+    text-align: left;
+    display: inline-block;
+}
+
+/* Foto */
+.profile-img {
+    width: 150px;
+    border: 5px solid #00c3ff;
+    border-radius: 50%;
+    margin-top: 20px;
+}
