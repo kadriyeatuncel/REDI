@@ -1,0 +1,77 @@
+/* Center the page content in a 960px-wide column.
+   margin: 0 auto -> 0 top/bottom, auto left/right (= centered) */
+body {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+/* Shared styles to make each section visible */
+section {
+  height: 250px;
+  margin-bottom: 20px;
+  padding: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading "pills": pastel colors (matches the semantic-elements example feel) */
+.property {
+  background-color: steelblue;
+  color: white;
+  padding: 0 6px;
+}
+.value {
+  background-color: lightyellow;
+  color: #333;
+  padding: 0 6px;
+}
+
+/* 1) background-color */
+.color-bg {
+  background-color: lightcoral;
+}
+
+/* 2-4) Shared image setup. Only background-size differs between them. */
+.auto-bg,
+.contain-bg,
+.cover-bg {
+  background-image: url("https://picsum.photos/id/1018/1200/400");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #333; /* shows around the image when it does not fill the box */
+
+  background: #333 url("https://picsum.photos/id/1018/1200/400") center
+    no-repeat;
+}
+
+/* 2) AUTO is the DEFAULT - we don't write background-size here on purpose.
+   The image is shown at its real (natural) size: 1200x400. */
+
+/* 3) CONTAIN: whole image visible, may leave empty space (letterboxing) */
+.contain-bg {
+  background-size: contain;
+}
+
+/* 4) COVER: image fully fills the box, edges may be cropped */
+.cover-bg {
+  background-size: cover;
+}
+
+/* 5) Repeating background - a small image tiled to fill the space */
+.repeat-bg {
+  background-image: url("https://picsum.photos/id/237/100/100");
+  /* background-repeat: repeat is the default, shown here for clarity */
+  background-repeat: repeat;
+}
+
+/* Dark glow so the heading stays readable on the busy tiled image */
+.repeat-bg h1 {
+  text-shadow:
+    0 0 6px black,
+    0 0 12px black;
+}
+
+/* But the white pill around "repeat" doesn't need the glow */
+.repeat-bg .value {
+  text-shadow: none;
+}

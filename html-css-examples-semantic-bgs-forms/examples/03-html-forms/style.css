@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* margin: 0 auto centers the card on the page */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* "block" puts each label on its own line, above the input */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* The box-sizing / font-family / font-size lines below are cross-browser fixes;
+   normalize.css would handle them for us. */
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Highlight the field when the user clicks/types in it */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: steelblue;
+  box-shadow: 0 0 0 2px rgba(70, 130, 180, 0.2);
+}
+
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  background-color: steelblue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #2c5d85;
+}

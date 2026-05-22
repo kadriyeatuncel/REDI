@@ -1,0 +1,108 @@
+/* usual setup of page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav img {
+  width: 5rem;
+}
+nav {
+  background-color: darkgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+}
+nav .link a {
+  margin: 1rem;
+}
+.home {
+  margin: 1rem;
+}
+/* image by background image */
+.home_img {
+  width: 80vw;
+  height: 50vw;
+  background-image: url("./image/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 1rem auto;
+}
+.card-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: darkgrey;
+}
+/* common css on every card */
+.card {
+  /* reference of positioning overlay text */
+  position: relative;
+  width: 40vw;
+  height: 40vw;
+  margin: 1rem;
+  border-radius: 3rem;
+  border: .25rem solid lightgray;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* specific image source by background image */
+.farmer {
+  background-image: url("./image/farmer.jpg");
+}
+/* specific image source by background image */
+.cow {
+  background-image: url("./image/cow.jpg");
+}
+/* position the text on bottom of container card */
+.overlay {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  font-size: 2rem;
+  /* Black see-through by opacity 0.5*/
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+footer {
+  margin: 1rem;
+  background-color: darkgrey;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+/* changes on layout when screen gets bigger than mobile */
+@media screen and (min-width: 600px) {
+  /* make paragraph a bit bigger */
+  p {
+    font-size: 1.25rem;
+  }
+  .card-box {
+    /* display: flex; not required any more*/
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  /* pictures beside text */
+  .home {
+    display: flex;
+  }
+  .home_text {
+    width: 50vw;
+    margin: 1rem;
+  }
+}

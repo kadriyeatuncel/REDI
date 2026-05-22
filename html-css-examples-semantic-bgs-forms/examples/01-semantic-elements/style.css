@@ -1,0 +1,55 @@
+/* Each semantic element gets its own background color
+   so you can clearly see where it starts and ends. */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+nav a {
+  margin-right: 15px;
+}
+
+/* Flexbox: <section> and <aside> sit side by side.
+   <section> is wider (flex: 3), <aside> is the sidebar (flex: 1). */
+main {
+  display: flex; /* turns <main> into a flex container; its children become flex items */
+  gap: 20px; /* space BETWEEN the section and the aside */
+  padding: 20px;
+}
+
+section {
+  flex: 3; /* takes 3 parts of the available width (3/4 of the row) */
+  background-color: lightyellow;
+  padding: 15px;
+}
+
+article {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+aside {
+  flex: 1; /* takes 1 part of the available width (1/4 of the row) */
+  background-color: lightgreen;
+  padding: 15px;
+}
+
+footer {
+  background-color: lightgray;
+  padding: 15px;
+  text-align: center;
+}
+
+/* On small screens, stack section and aside vertically. */
+@media (max-width: 700px) {
+  main {
+    flex-direction: column; /* arrange flex items top-to-bottom instead of left-to-right */
+  }
+}

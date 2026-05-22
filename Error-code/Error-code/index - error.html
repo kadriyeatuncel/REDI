@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luminary Studio | Professional Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: f3dcb9;
+        color: #1a1614;
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+
+      /* ── NAVIGATION ── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        min-height: 4.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 1rem 5%;
+        z-index: 1000;
+        background: rgba(245, 240, 232, 0.9);
+        backdrop-filter: blur(10px);
+      }
+
+      .nav-logo {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      .nav-links a {
+        margin-left: 2rem;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ── CONTACT SECTION ── */
+      .contact-section {
+        padding: 8rem 10%;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 4rem;
+      }
+
+      .contact-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1.2;
+        margin-bottom: 2.5rem;
+      }
+
+      .contact-detail {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.25rem;
+        margin-bottom: 2rem;
+      }
+
+      .icon-box {
+        color: #c4541a;
+        flex-shrink: 0;
+      }
+
+      .icon-box svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      .contact-detail h3 {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #7a6f65;
+        margin-bottom: 0.25rem;
+      }
+
+      /* ── FORM ── */
+      .form-group {
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      input,
+      textarea {
+        padding: 1rem;
+        border: 1px solid #d4b896;
+        background: transparent;
+        font-family: inherit;
+        font-size: 1rem;
+        width: 100%;
+      }
+
+      .submit-btn {
+        background: #1a1614;
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background: #c4541a;
+      }
+
+      @media (max-width: 768px) {
+        .contact-section {
+          grid-template-columns: 1fr;
+          padding-top: 6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#home" class="nav-logo">Luminary</a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-info">
+        <h2 class="contact-title">Let's party together.</h2>
+
+        <div class="contact-detail">
+          <div class="icon-box">
+            <svg
+              role="img"
+              aria-label="Phone Icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              />
+            </svg>
+          </div>
+          <div>
+            <h3>Phone</h3>
+            <p>+1 (212) 555 0194</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="user-name">Full Name</label>
+          <input
+            type="text"
+            id="user-name"
+            name="user-name"
+            placeholder="Jane Smith"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="user-email">Email Address</label>
+          <input
+            type="email"
+            id="user-email"
+            name="user-email"
+            placeholder="jane@example.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="user-message">Project Brief</label>
+          <textarea
+            id="user-message"
+            name="user-message"
+            rows="5"
+            placeholder="Tell us about your project…"
+          ></textarea>
+        </div>
+
+        <button class="submit-btn" type="submit">Send Message</button>
+      </form>
+    </section>
+  </body>
+</html>

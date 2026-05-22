@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Forms Example - ReDI School</title>
+
+  <!-- normalize.css makes default styles look the same across browsers.
+      Very popular - to use it, uncomment the line below. -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"> -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Contact ReDI School</h1>
+
+  <!-- <form>: wraps all the inputs.
+      action = where to send the data (empty = the same page).
+      method = how to send it: "get" puts the data in the URL, "post" hides it in the request body. -->
+  <form action="" method="get">
+
+    <!-- TEXT input.
+        id   = unique name inside the page (used by <label for="...">).
+        name = the KEY used when the form is sent (e.g. ?name=Maria in the URL). -->
+    <label for="name">Your name:</label>
+    <input type="text" id="name" name="name" placeholder="e.g. Maria">
+
+    <!-- EMAIL input: the browser checks the value looks like an email.
+        "required" means the form won't submit if this field is empty. -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <!-- SELECT: a dropdown, with one <option> per choice. -->
+    <label for="city">Campus:</label>
+    <select id="city" name="city">
+      <option value="berlin">Berlin</option>
+      <option value="munich" selected>Munich</option>
+      <option value="hamburg">Hamburg</option>
+      <option value="copenhagen">Copenhagen</option>
+    </select>
+
+    <!-- TEXTAREA: a bigger box for longer text. rows = visible height in lines. -->
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" placeholder="How can we help you?"></textarea>
+
+    <!-- type="submit": this button sends the form.
+
+        IMPORTANT: by itself, this form does NOT actually work!
+        Clicking "Send message" only reloads this page with the data in the URL.
+        To really do something with the data you need EITHER:
+          - JavaScript in the browser (e.g. show a message, save to localStorage), OR
+          - a back-end on a server (PHP / Node.js / Python) that receives and stores the data. -->
+    <button type="submit">Send message</button>
+
+  </form>
+
+</body>
+
+</html>

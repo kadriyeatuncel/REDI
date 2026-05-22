@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Background Image Example - ReDI School</title>
+
+  <!-- normalize.css makes default styles look the same across browsers.
+  Very popular - to use it, uncomment the line below. -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"> -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 1) Background COLOR -->
+  <section class="color-bg">
+    <h1>1. <span class="property">background-color:</span> <span class="value">lightcoral</span>
+    </h1>
+  </section>
+
+  <!-- Sections 2-4 use the SAME image in the SAME box.
+      Only background-size changes, so you can compare them directly. -->
+
+  <!-- 2) AUTO (default): image at natural size, may be cropped if bigger than the box -->
+  <section class="auto-bg">
+    <h1>2. <span class="property">background-size:</span> <span class="value">auto</span> (the
+      default)</h1>
+  </section>
+
+  <!-- 3) CONTAIN: whole image fits inside, aspect ratio kept (empty space possible) -->
+  <section class="contain-bg">
+    <h1>3. <span class="property">background-size:</span> <span class="value">contain</span></h1>
+  </section>
+
+  <!-- 4) COVER: image fully fills the box, aspect ratio kept (cropping possible) -->
+  <section class="cover-bg">
+    <h1>4. <span class="property">background-size:</span> <span class="value">cover</span></h1>
+  </section>
+
+  <!-- 5) REPEAT: a small image tiled to fill the section -->
+  <section class="repeat-bg">
+    <h1>5. <span class="property">background-repeat:</span> <span class="value">repeat</span></h1>
+  </section>
+
+</body>
+
+</html>

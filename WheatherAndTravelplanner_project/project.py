@@ -64,10 +64,12 @@ def generate_todos(weather, user_info):
     if user_info.get('has_child') == 'yes':
         tasks.append("With Kids: Visit the Toy Museum or the Hellabrunn Zoo 🦒")
 
+
     return tasks
 
 @app.route('/')
 def home():
+    # Fixed: Now specifically calls your wireframe file
     return render_template('index.html')
 
 @app.route('/generate', methods=['POST'])
@@ -76,6 +78,15 @@ def generate():
     weather = get_live_weather()
     todos = generate_todos(weather, user_data)
     return render_template('result.html', weather=weather, tasks=todos)
+@app.route('/planner-form')
+
+def planner_form():
+    # Bu satır seni asıl formun olduğu o temiz index sayfasına götürür
+    return render_template('planner.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
+
+    
